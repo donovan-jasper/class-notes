@@ -1,0 +1,37 @@
+CS143 Permitted Regex Symbols:
+
+ReGex to DFA:
+
+    Create two new states, a start state and an accept state, and connect them with a directed edge labeled with the regular expression being converted.
+
+    For each basic regular expression operation, the NFA is constructed as follows:
+    a. Concatenation: To represent the concatenation of two regular expressions, create a new start state, 
+    connect it to the start state of the first NFA with a ε transition, connect the accept state of the first NFA to the start state of the second NFA with a ε transition, and connect the accept state of the second NFA to the new accept state.
+    b. Alternation (OR): To represent the alternation of two regular expressions, create a new start state, 
+    connect it to the start state of each NFA with a ε transition, connect the accept state of each NFA to the new accept state with a ε transition.
+    c. Kleene star (closure): To represent the closure of a regular expression, create a new start state, 
+    connect it to the start state of the NFA with a ε transition, connect the accept state of the NFA back to the start state with a ε transition, 
+    and connect the start state to the new accept state with a ε transition.
+
+    Parentheses: To handle parentheses in the regular expression, the NFA is constructed recursively for the sub-expression within the parentheses.
+
+    Character classes: To handle character classes in the regular expression, create a transition 
+    for each character in the class from the start state to the accept state.
+
+    Special characters: To handle special characters in the regular expression, 
+    such as '.' (dot) and '^' (caret), create appropriate transitions in the NFA.
+
+DFA vs. NFA Construction:
+
+    In a DFA, for each input symbol and state, there is only one transition to the next state. 
+    This means that the transition function is deterministic, and there is no ambiguity in the next state that should be reached.
+
+    In an NFA, for each input symbol and state, there can be multiple transitions to the next state. 
+    This means that the transition function is non-deterministic, and there is ambiguity in the next state that should be reached. 
+    This extra expressive power of NFAs is what allows them to recognize a wider range of languages, 
+    but it also makes them more complex to work with.
+
+    In terms of self-loops, both NFAs and DFAs can have self-loops, as long as they are properly defined in the transition function. 
+    The difference is that, in a DFA, a self-loop would only be triggered by a specific input symbol, while in an NFA, 
+    multiple self-loops for the same state and input symbol are possible.
+
