@@ -1,0 +1,32 @@
+Title: Cool Programming Language: An Introductory Lecture
+
+- Cool introduction:
+  - Class-based, object-oriented language
+  - Designed for educational purposes
+  - Simple syntax and statically typed (type checking at compile time)
+
+- Expression-based language:
+  - Every construct is an expression (e.g., if, while)
+  - Example: if isTrue then 1 else 0 fi
+
+- Static and dynamic types:
+  - Static types: declared types of variables (e.g., Int, Bool, String)
+  - Dynamic types: types of objects during execution
+  - Example: let x: Int <- 5 in x * 2
+
+- Method invocation:
+  - Invoking a method on an object (e.g., obj.method(args))
+  - Example: let x: Int <- 5 in x.plus(3)
+
+- Cool compiler project:
+  - Implement a compiler for Cool in four separate pieces:
+    1. Lexical analysis (lexer)
+    2. Parsing (parser)
+    3. Semantic analysis (type checker)
+    4. Code generation (codegen)
+
+
+Summary:
+This lecture provides an introduction to the Cool programming language, a class-based, 
+object-oriented language designed for educational purposes. The lecture covers its expression-based nature, 
+static and dynamic types, method invocation, and a Cool compiler project.
