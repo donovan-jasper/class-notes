@@ -1,4 +1,4 @@
 # class-notes
 Stanford Class Notes!
 
-These notes are taken by me (Donovan Jasper) from lecture with languague model assitance :).
+These notes are taken by me (djasper@stanford.edu) from lecture with languague model assitance :).
