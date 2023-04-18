@@ -1,0 +1,50 @@
+Title: Encryption Technologies and Their Impact on Censorship
+
+- Introduction to internet encryption and its importance
+    - Ensuring secure communication between parties
+    - Protecting sensitive information from unauthorized access
+
+- TLS (Transport Layer Security) protocol
+    - Successor to SSL (Secure Sockets Layer)
+    - Provides secure communication over computer networks
+
+- TLS 1.3: Latest version of encryption for secure internet communications
+    - Released in August 2018
+    - Improvements in security and speed compared to TLS 1.2
+    - Example: Improvement in HTTPS
+    - Faster and more secure than previous versions
+    - Reduces risk of man-in-the-middle attacks
+    - Resisted by certain telecom companies, especially those aligned with authoritarian states
+
+- Undersea cables and fiber tapping
+    - Major source of data interception
+    - Vulnerable to physical tapping, allowing access to transmitted data
+    - Encryption technologies help mitigate risks by ensuring data confidentiality
+
+- US fiber tapping
+    - Involvement of National Security Agency (NSA)
+    - Edward Snowden revelations in 2013
+        - Exposed US government's widespread surveillance activities
+        - Uncovered fiber tapping practices
+    - Because there was no security provisions for internal side of networks tapping was quite easy with US reach
+
+- China Telecom and resistance to TLS 1.3
+    - Concerned about loss of control over internet traffic
+    - May face difficulties in maintaining the Great Firewall
+    - Authoritarian states prefer control and surveillance over internet activities
+
+- Helios Protocol: Designed to bypass censorship
+    - New technology aiming to challenge censorship regimes
+    - Offers decentralized, encrypted communication for users
+    - Blocked in some parts of the world, particularly in authoritarian states
+
+- Upgrading underlying internet technologies
+    - Aim to prevent censorship
+    - Impact on Great Firewall and other censorship systems
+    - Ongoing global efforts to improve internet infrastructure
+
+- Discussion of global consequences
+    - Conflicting interests between governments, telecom companies, and internet users
+    - Balancing security, privacy, and freedom of speech
+
+Summary: The advancements in encryption technologies, such as TLS 1.3 and the Helios Protocol, are challenging censorship regimes around the world. Undersea cables and fiber tapping represent major vulnerabilities in global data transmission, with cases like the US fiber tapping exposed by Edward Snowden highlighting privacy and surveillance concerns. Encryption helps mitigate these risks. Some telecom companies, particularly those associated with authoritarian states, are resisting these changes due to concerns about losing control over internet traffic. The upgrades to the underlying internet technologies are creating an interesting situation for the future of censorship systems like the Great Firewall. This ongoing conflict highlights the need to balance security, privacy, and freedom of speech.
