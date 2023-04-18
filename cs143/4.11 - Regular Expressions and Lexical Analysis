@@ -1,0 +1,39 @@
+Lecture Summary: Regular Expressions and Lexical Analysis
+
+Part 1: Introduction to Lexical Analysis
+- Lexical analysis is the process of converting a sequence of characters into a sequence of tokens
+- Tokens are the smallest meaningful units in a programming language
+- Lexers are tools that perform lexical analysis
+
+Part 2: Regular Expressions
+- Regular expressions are a powerful tool to describe the syntax of tokens and are widely used in programming languages
+- Symbols used in regular expressions include:
+  - Union (|): a|b
+  - Concatenation: ab
+  - Kleene Star (*): a*
+  - Optional (?): a?
+  - Ranges and character classes: [A-Za-z0-9]
+
+Part 3: Examples of Regular Expressions
+- Identifiers: a string of letters or digits, starting with a letter.
+  [A-Za-z][A-Za-z0-9]*
+- White spaces: a set of white spaces including new line, tab, and blank.
+  (\n|\t| )*
+- Phone numbers: using named fragments for different parts of the phone number.
+  \((\d{3})\)-\d{3}-\d{4}
+- Pascal numbers: specifying unsigned Pascal numbers using optional fractions and exponents.
+  \d+(\.\d+)?(E[+-]?\d+)?  
+
+Part 4: Limitations of Regular Languages
+- Regular languages are not powerful enough to describe statements and expressions; for that, we need context-free languages
+- Regular languages are used for tokenization, while context-free languages are used for parsing
+
+Part 5: Upcoming Topics
+- In the next lecture, the implementation of regular expressions using finite state machines will be covered
+- Context-free languages will be introduced to describe statements and expressions in programming languages
+
+Summary:
+In this lecture, we discussed the role of regular expressions and lexical analysis in parsing programming languages. 
+Regular expressions are a powerful tool for describing the syntax of tokens, which are the smallest meaningful units in a programming language. 
+Regular languages can be used to describe the structure of tokens but are not sufficient for describing complex programming constructs like statements or expressions. 
+In the next lecture, we will explore context-free languages, which are necessary for describing more complex programming constructs.
