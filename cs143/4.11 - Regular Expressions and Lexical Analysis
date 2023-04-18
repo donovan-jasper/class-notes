@@ -23,6 +23,20 @@ Part 3: Examples of Regular Expressions
   \((\d{3})\)-\d{3}-\d{4}
 - Pascal numbers: specifying unsigned Pascal numbers using optional fractions and exponents.
   \d+(\.\d+)?(E[+-]?\d+)?  
+  - (\.\d+)?: This part is responsible for matching an optional decimal fraction. 
+    The expression is enclosed in parentheses to group it together. 
+    The \. represents a literal dot (decimal point), and \d+ matches one or more digits that follow the decimal point. 
+    The question mark ? at the end of this group means that the decimal fraction is optional, 
+    so the expression will also match integers without a decimal point.
+  - (E[+-]?\d+)?: This part is responsible for matching an optional exponent. 
+    The exponent notation in Pascal numbers uses the letter 'E' followed by an optional '+' or '-' sign, and then one or more digits. 
+    The E in the expression matches the letter 'E', [+-]? matches an optional '+' or '-' sign, and \d+ matches one or more digits for the exponent value. 
+    The question mark ? at the end of this group indicates that the exponent part is optional, so the expression will match numbers without an exponent.
+  - This expresssion will match the following examples:
+    - 42: An integer
+    - 3.14: A floating-point number with a decimal fraction
+    - 1.23E4: A floating-point number with a decimal fraction and a positive exponent
+    - 2.34E-5: A floating-point number with a decimal fraction and a negative exponent
 
 Part 4: Limitations of Regular Languages
 - Regular languages are not powerful enough to describe statements and expressions; for that, we need context-free languages
