@@ -1,0 +1,72 @@
+Title: Lexers, Regular Expressions, and Automata: Constructing and Optimizing Automata
+
+- Reminder about lexers and regular expressions
+  * Lexers: tools that process and tokenize text
+  * Regular expressions: patterns used to describe and match strings
+
+- Constructing Deterministic Finite Automata (DFA)
+  * States, transitions, and accepting states
+  * Conversion from regular expressions to DFA
+  * Potential for exponential growth in the number of states
+
+- Non-Deterministic Finite Automata (NFA)
+  * States and transitions with non-deterministic behavior
+  * Transition from regex to NFA using Thompson's construction
+  * Composition of smaller NFAs to create a larger NFA
+
+- Conversion between NFA and DFA
+  * Subset construction algorithm
+  * Sometimes results in a simplified automaton with fewer states
+
+- Conversion Examples
+  * Example 1: regex ab* -> DFA
+    - Regex: Matches strings starting with 'a' followed by zero or more 'b's
+    - DFA: 3 states (A, B, C)
+      - State A: initial state, transition to state B on 'a'
+      - State B: accepting state, self-transition on 'b'
+      - State C: dead state, no transitions out
+
+  * Example 2: regex (a|b)*abb -> NFA using Thompson's construction
+    - Regex: Matches strings containing a's and b's ending in 'abb'
+    - NFA: 12 states (1-12)
+      - Initial state 1, epsilon transition to states 2 and 10
+      - States 2-5: loop matching (a|b)*
+      - States 6-9: matching 'abb'
+      - State 12: accepting state
+    - Conversion to DFA: 5 states (A, B, C, D, E)
+      - State A: initial state, transition to state B on 'a', state C on 'b'
+      - State B: transition to state B on 'a', state D on 'b'
+      - State C: transition to state B on 'a', state C on 'b'
+      - State D: transition to state B on 'a', state E on 'b'
+      - State E: accepting state, transition to state B on 'a', state C on 'b'
+
+  * Example 3: NFA for regex (0|1)*1(0|1) -> simplified DFA
+    - Regex: Matches strings containing 0's and 1's with a '1' in the middle
+    - NFA: 5 states (P, Q, R, S, T)
+      - Initial state P, epsilon transitions to states Q and R
+      - States Q and R: loop matching (0|1)*
+      - State S: matching '1'
+      - State T: accepting state, loop matching (0|1)
+    - Conversion to DFA: 3 states (X, Y, Z)
+      - State X: initial state, transitions to state X on '0', state Y on '1'
+      - State Y: transition to state X on '0', state Z on '1'
+      - State Z: accepting state, transitions to state X on '0', state Y on '1'
+
+- Implementing automata on a computer
+  * Generate a transition table
+  * Two-dimensional array, rows for states and columns for input symbols
+  * Efficient lookup and iteration through the table during execution
+
+- Optimizations and trade-offs
+  * Possible optimizations on the DFA before generating the table
+  * Separate optimization processes for different stages of code generation
+  * Tools like Flex make reasonable trade-offs between NFA and DFA
+
+- Next steps and future topics
+  * Parsing: more powerful languages than regular expressions
+  * Sophisticated algorithms for implementing parsers
+
+Summary: This lecture covered the concepts of lexers, regular expressions, and automata, 
+focusing on the construction and optimization of deterministic and non-deterministic finite automata. 
+The process of converting regular expressions to DFAs and NFAs was discussed, along with techniques for implementing automata on a computer using transition tables. 
+Finally, possible optimizations and trade-offs were explored, as well as a brief introduction to the upcoming topic of parsing.
