@@ -1,0 +1,40 @@
+Title: Precedence and Associativity in Parsing
+
+Summary:
+This lecture explores the concepts of precedence and associativity in parsing, and how they affect grammar. 
+It also introduces the use of tools such as Bison to manage these concepts in the parsing process. 
+Furthermore, the lecture briefly touches upon unmatched analysis and error handling in parsing.
+
+Bullet Point Notes:
+
+- Ambiguity in grammar
+  - Parsing needs to resolve ambiguities in grammar to construct the correct parse tree
+  - Example: "2 + 3 * 4" has two possible parse trees with different interpretations
+
+- Precedence
+  - Precedence defines the order in which operators should be evaluated
+  - Example: In arithmetic, multiplication has higher precedence than addition
+
+- Associativity
+  - Associativity defines the order in which operators with the same precedence should be evaluated
+  - Example: In arithmetic, addition is left-associative, meaning "1 + 2 + 3" is evaluated as "(1 + 2) + 3"
+
+- Stratified grammar
+  - An approach to enforce precedence by rewriting the grammar into layers
+  - Example: Separate addition and multiplication expressions into different layers in the grammar
+
+- Bison tool
+  - Bison is a parser generator that can help manage precedence and associativity
+  - Example: Use Bison to declare precedence and associativity rules for addition and multiplication
+
+- Precedence and associativity in Bison
+  - Declare precedence and associativity rules in Bison using specific notations
+  - Example: Declare addition and multiplication as left-associative and enforce their precedence order
+
+- Unmatched analysis
+  - A more involved topic that deals with unmatched constructs in grammar
+  - Example: Dangling "if-else" statements and "if" statements without corresponding "else"
+
+- Upcoming topics
+  - Error handling and recursive descent parsing in the next lecture
+  - Table-driven parsing algorithms in the following week

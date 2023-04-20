@@ -1,0 +1,42 @@
+Lecture Title: Recursive Descent Parsing
+
+Summary:
+In this lecture, we discuss the basics of recursive descent parsing, a top-down parsing strategy that uses 
+backtracking to construct a parse tree from a given input. We cover how to write recursive descent parsers by hand, 
+eliminate left recursion in a grammar, and how this approach compares to other parsing techniques.
+
+Detailed Bullet Points:
+
+- Introduction to Recursive Descent Parsing
+   - Top-down parsing strategy: Starts from the start symbol and tries to rewrite it to match the input string
+   - Constructs parse tree from input by applying grammar rules
+   - Backtracking: If a rule doesn't lead to a correct parse tree, it backtracks and tries another rule
+   - Example: Arithmetic expressions with addition and multiplication
+
+- Writing Recursive Descent Parsers by Hand
+   - Create functions for each non-terminal in the grammar
+   - Functions call each other recursively based on grammar rules
+   - Match terminals directly in the input stream
+   - Backtracking implemented by trying alternative rules when a rule doesn't match
+   - Example: Writing a parser for arithmetic expressions with addition, multiplication, and parentheses
+
+- Limitations of Recursive Descent Parsing
+   - Left recursion in grammar causes infinite looping: The parser keeps calling itself with no progress
+   - Example of left recursion: Grammar S → Sα | β
+   - Solution: Eliminate left recursion in grammar to prevent infinite loops
+
+- Eliminating Left Recursion
+   - Convert left-recursive grammar to right recursion
+   - Example: Transforming grammar S → Sα | β to S → βS' and S' → αS' | ε
+   - General rule for eliminating left recursion in a grammar
+   - Handling more complex cases with the Dragon Book: Provides a detailed algorithm for eliminating left recursion in any context-free grammar
+
+- Recursive Descent in Practice
+   - Hand-written parsers give control over error handling and allow handling of special cases
+   - Parser generator tools can eliminate left recursion and resolve ambiguity automatically
+   - Backtracking was considered too slow in the past, but modern machines and simpler grammars have made it more efficient
+   - Restricting grammar can reduce the amount of backtracking required, improving performance
+
+- Predictive Parsers
+   - Look at tokens ahead in the input to avoid backtracking by making the right decision based on the next token
+   - Will be covered in the next lecture: Introduces algorithms for constructing parsing tables to implement predictive parsing
