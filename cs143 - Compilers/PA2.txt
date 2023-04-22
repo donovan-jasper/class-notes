@@ -1,0 +1,31 @@
+Precedence:
+
+  The precedence of infix binary and prefix unary operations, from highest to lowest, is given by the
+  following table:
+    .
+    @
+    ~
+    isvoid
+    * /
+    + -
+    <= < =
+    not
+    <-
+  All binary operations are left-associative, with the exception of assignment, which is right-associative,
+  and the three comparison operations, which do not associate.
+  
+  
+AST:
+  For each phylum named X there is a phylum called Xs (except for Classes, which is a list of Class
+  nodes) of type List[X]. List functions are defined automatically for each list. For the Class phylum
+  some of the list functions and methods are:
+    Classes nil_Classes();
+    Classes single_Classes(Class_);
+    Classes append_Classes(Classes,Classes);
+    Class_ nth(int index);
+    int len();
+
+The class constructor returns an AST of type (or phylum) Class . In cool.y there is the following
+example of a use of the class constructor:
+  class : CLASS TYPEID INHERITS TYPEID IS optional_feature_list END ’;’
+  { $$ = class_($2,$4,$6,stringtable.add_string(curr_filename)); }
